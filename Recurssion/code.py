@@ -78,6 +78,19 @@ def fibonacci(n):
 print(fibonacci(7))
 print(fibonacci(20))
 
+####################################    Climbing Stairs    ######################################################
+
+def waysclimbingstairs(n):      #with 1 or 2 sized steps
+    if n==0:
+        return 0
+    if n==2:
+        return 2
+    if n==1:
+        return 1
+    return waysclimbingstairs(n-1) + waysclimbingstairs(n-2)
+
+print(waysclimbingstairs(5))
+
 
 
 
