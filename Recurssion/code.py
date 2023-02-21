@@ -29,6 +29,32 @@ print(ispalindrome("KAYAK"))
 print(ispalindrome("1001001"))
 print(ispalindrome("NEWN"))
 
+########################   Palindromic Substrings   ################################
+
+def palindromsubstringcount(arr,i,count):
+    if i==len(arr):
+        return count
+    for j in range(len(arr)):
+        if i-j<0 or i+j+1>len(arr):
+            break
+        if arr[i-j]==arr[i+j]:
+            count+=1
+        if arr[i-j]!=arr[i+j]:
+            break
+    for k in range(len(arr)):
+        if i-k<0 or i+k+2>len(arr):
+            break
+        if arr[i-k]==arr[i+k+1]:
+            count+=1
+        if arr[i-k]!=arr[i+k+1]:
+            break
+    return palindromsubstringcount(arr,i+1,count)
+
+s="aaab"
+arr=list(s)
+print(palindromsubstringcount(arr,0,0))
+     
+
 ######################################### DECIMAL TO BIANRY #######################
 
 def decimaltobinary(n,result):
