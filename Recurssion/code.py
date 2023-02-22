@@ -117,6 +117,26 @@ def waysclimbingstairs(n):      #with 1 or 2 sized steps
 
 print(waysclimbingstairs(5))
 
+###########################   Coin change    #####################################     
+
+def minimumcoins(arr,k,solution,coins):
+     n=len(arr)
+     if k==0:
+          return 0
+     list2=[]
+     for i in range(n):
+          for j in range(len(solution)):
+               list2.append(solution[j]+arr[i])
+     if k in list2:
+          return coins+1
+     if min(list2)>k:
+          return -1
+     solution=list2
+     coins+=1
+     return minimumcoins(arr,k,solution,coins)
+
+print(minimumcoins([1,2,5],11,[0],0))
+
 
 
 
