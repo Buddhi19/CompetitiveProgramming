@@ -141,7 +141,7 @@ print(minimumcoins([1,2,5],11,[0],0))
 ############################## Recursive KnapSack ######################################
 
 def knapsack(i,weights,value,CurrentCapacity):
-    if i<0 or CurrentCapacity==0:
+    if i<0 or CurrentCapacity<0:
         return 0
     if weights[i]>CurrentCapacity:
         return knapsack(i-1,weights,value,CurrentCapacity)
