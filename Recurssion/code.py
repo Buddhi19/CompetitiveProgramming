@@ -138,6 +138,24 @@ def minimumcoins(arr,k,solution,coins):
 print(minimumcoins([1,2,5],11,[0],0))
 
 
+############################## Recursive KnapSack ######################################
+
+def knapsack(i,weights,value,CurrentCapacity):
+    if i<0 or CurrentCapacity==0:
+        return 0
+    if weights[i]>CurrentCapacity:
+        return knapsack(i-1,weights,value,CurrentCapacity)
+
+    else:
+        result1=knapsack(i-1,weights,value,CurrentCapacity)
+        result2=value[i]+knapsack(i-1,weights,value,CurrentCapacity-weights[i])
+        return max(result1,result2)
+    
+weights=[1,2,4,2,5]
+value=[5,3,5,3,2]
+print(knapsack(len(weights)-1,weights,value,10))
+
+
 
 
     
