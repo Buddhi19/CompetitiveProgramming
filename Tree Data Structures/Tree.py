@@ -15,7 +15,7 @@ class TreeNode:
         while p:
             p=p.parent
             level+=1
-        print(" "*level,end='')
+        print(" "*level*2,end='')
         return level
 
     def print_tree(self):
@@ -46,4 +46,11 @@ if __name__=="__main__":
     root.print_tree()
     pass
 
+# Electronics
+#   Computers
+#     Laptops
+#     desktops
+#   Mobiles
+#     Iphonrs
+#     Samsung
 
