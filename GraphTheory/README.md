@@ -2,6 +2,6 @@
 
 ### Three Steps Should Follow
 
-#### Formalize
-#### Specify
-#### Code
+Formalize
+Specify
+Code
