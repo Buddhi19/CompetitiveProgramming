@@ -9,3 +9,7 @@ Code
 
 G=(V,E)\
 size-> number of edges
+
+### Adjacency Matrix
+
+Symmetric grid defining the graph
